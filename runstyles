@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Compile stylesheets
+cd stylesheets
+compass watch 

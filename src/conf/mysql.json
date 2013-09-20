@@ -1,0 +1,8 @@
+{
+	"host": "localhost",
+	"port": null,
+	"database": "ufrontnet",
+	"user": "ufrontnet",
+	"pass": "ufrontnet",
+	"socket": null
+}
