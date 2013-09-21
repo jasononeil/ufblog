@@ -2,7 +2,7 @@
 	"host": "localhost",
 	"port": null,
 	"database": "ufrontnet",
-	"user": "ufrontnet",
-	"pass": "ufrontnet",
+	"user": "",
+	"pass": "",
 	"socket": null
 }
