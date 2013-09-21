@@ -8,7 +8,6 @@
 -lib compiletime
 # haxelib git promhx git://github.com/jasononeil/promhx.git haxe3 haxelib
 -lib promhx
--lib dtx-bootstrap
 -cp src/
 
 # Compile flags

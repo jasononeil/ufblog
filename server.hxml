@@ -2,7 +2,7 @@
 -lib tink_core
 -lib compiletime
 -lib markdown
--lib thx
+#-lib thx # Needed, but bundled with ufront-mvc for now
 -main server.Server
 -cp src
 -D server 
