@@ -8,7 +8,7 @@
 -lib compiletime
 # haxelib git promhx git://github.com/jasononeil/promhx.git haxe3 haxelib
 -lib promhx
--cp src/
+-cp src
 
 # Compile flags
 -D client
