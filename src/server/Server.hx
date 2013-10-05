@@ -1,5 +1,6 @@
 package server;
 
+import sys.db.Mysql;
 import ufront.application.UfrontApplication;
 import ufront.ufadmin.controller.DBAdminController;
 import ufront.ufadmin.controller.UFAdminController;
@@ -10,23 +11,20 @@ import app.Api;
 class Server
 {
 	static var ufApp:UfrontApplication;
-	static function main()
-	{
+	static function main() {
 		// enable caching if using mod_neko or mod_tora
 		#if (neko && !debug) neko.Web.cacheModule(main); #end
 
-		// If caching is enabled, init() will only need to run once
-		init();
-
-		// execute the current request
-		ufApp.execute();
+		// This ensures each request is wrapped in a transaction, and if it fails, it will rollback. 
+		// It will also close the connection after each request
+		sys.db.Transaction.main( Mysql.connect(Config.db), function() {
+			init(); // If caching is enabled, init() will only need to run once
+			ufApp.execute(); // execute the current request
+		});
 	}
 
 	static function init() {
 		if (ufApp==null) {
-
-			// Connect to DB
-			sys.db.Manager.cnx = sys.db.Mysql.connect( Config.db );
 
 			// Add ufadmin modules
 			UFAdminController.addModule( "db", "Database", new DBAdminController() );
