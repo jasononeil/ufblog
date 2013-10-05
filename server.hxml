@@ -5,6 +5,7 @@
 #-lib thx # Needed, but bundled with ufront-mvc for now
 -main server.Server
 -cp src
+-cp ../ufblog2/thx/src
 -D server 
 -dce no
 
