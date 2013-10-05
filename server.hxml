@@ -19,5 +19,5 @@
 
 # PHP
 --remap neko:php
---php-lib php/
--php out/
+--php-lib php
+-php out
