@@ -4,12 +4,8 @@ import app.Errors;
 import server.Server;
 import ufront.web.Controller;
 
-class BlogController
+class BlogController extends Controller
 {
-	public function new() {
-		trace ("New blog controller");
-	}
-
 	public function doDefault( ?category:String, ?args:{ page:Int } ) {
 		trace ("Do Default");
 		var page = (args!=null) ? args.page : 0;
