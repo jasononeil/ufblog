@@ -3,7 +3,7 @@
 Install Haxe 3.0 & Neko 2.0
 
     # this works for Ubuntu.  Do what you need to for other OS's
-    bash <(curl -s https://raw.github.com/jasononeil/OneLineHaxe/master/scripts/linux-ubuntu-1204-haxe3.sh)
+    bash <(curl -s https://raw.github.com/jasononeil/OneLineHaxe/master/scripts/linux-ubuntu-1204-haxe-3-0-0.sh)
 
 Update haxelib
 
